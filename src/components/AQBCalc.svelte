@@ -1,5 +1,5 @@
 <script>
-import { getTotalIssuance } from '../stores/kusama-api.js';
+import { getTotalIssuance, lastReferendumIndex } from '../stores/kusama-api.js';
 
 </script>
 
@@ -26,5 +26,7 @@ import { getTotalIssuance } from '../stores/kusama-api.js';
 </form>
 
 <ul>
+<li>{$lastReferendumIndex}</li>
   <li>{$getTotalIssuance}</li>
+  
 </ul>

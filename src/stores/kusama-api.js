@@ -18,3 +18,11 @@ export const getGenesisHash = readable(null, async function start(set) {
 
 	return () => {}
 });
+
+export const lastReferendumIndex = readable(null, async function start(set) {
+    
+    let i = await (await api).query.democracy.referendumCount() - 1;
+    set(i);
+
+    return () => {}
+});
